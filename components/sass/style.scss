@@ -1,11 +1,20 @@
 /* Scss Document */
-$primary: #ccc;
-$secondary: #999;
+@import "compass/css3";
+@import "variables";
+@import "mixins";
+
 
 body{
-	background: $primary;
+	background: $color-primary;
 }
 .test {
-	background: $secondary;
+	background: $color-secondary;
 }
-
+/*carousel*/
+#carousel-example-generic .item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+}

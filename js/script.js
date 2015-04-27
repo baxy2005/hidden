@@ -1,1 +1,1 @@
-function test(){return"hi "}
+$(".carousel").carousel();var wheight=$(window).height();$(".fullheight").css("height",wheight),$("#carousel-example-generic .item img").each(function(){var a=$(this).attr("src");$(this).parent().css({"background-image":"url("+a+")"}),$(this).remove()}),$(window).resize(function(){wheight=$(window).height(),$(".fullheight").css("height",wheight)});
