@@ -48,14 +48,87 @@ body{
 	background: $color-secondary;
 }
 /*opening*/
-.openingBlog {
-	padding-top: $paddingOpeningSection;
+.openingBlog, .openingPlace {
+	margin-top: $paddingOpeningSection;
 }
+
+.openingBlog {
+	h2, .small, p {
+			text-align:center;
+	}
+	h2 {
+		font-size: $margintwenty;
+		color: $color-primary;
+		margin-bottom: 3px;
+	}
+	.small {
+		margin-bottom: 10px;
+		display: block;
+		color: $color-lightGray;
+		font-size: 1em;
+	}
+	P {
+	color: $color-gray;	
+	margin-bottom: 25px;
+	}
+}
+.btn {
+	border-radius: 32px;
+	font-size: 15px;
+	padding: 4px 33px;
+	}
+.btn-default {
+    color: $color-primary;
+    border-color: $color-btn-gray;
+}
+
 .iconOpening {
 	background-color: $color-primary;
 	height: 42px;
 	border-radius: 32px;
+}
+.marginBottom{
 	margin-bottom: $paddingOpeningSection;
+}
+.marginBottomSmall{
+	margin-bottom: $margintwenty;
+}
+.owlePadding {
+	padding-left:0px;
+	padding-right: 0px;
+}
+.item {
+	padding-left:15px;
+	padding-right: 15px;
+}
+
+/*places opening*/
+.openingPlace 
+	h3 {
+	text-align: center;
+	color: $color-primary;
+	font-size: $mid-header-size;	
+	margin-top:0;
+	margin-bottom: $margintwenty;
+	letter-spacing: 2px;
+}
+.openingPlace h5{
+	font-size: $smaller-header-size;
+	text-align: center;
+	color: $color-lightGray;
+	margin-top: $margintwenty;
+	margin-bottom: 5px;
+	}
+.openingPlace .item a {
+		text-decoration: none;
+}
+.openingPlace .item h5:hover {
+		text-decoration: none;
+		color: $color-primary;
+}
+/*owl carousel*/
+.owl-theme .owl-controls {
+    margin-top: 0;
 }
 
 /*carousel*/
@@ -119,8 +192,7 @@ header {
 	}
 	h1 {
 		font-size: 1.143em;
-		margin: 0;
-		padding: 0;
+		@include paddingMarginZero;
 		text-align: center;
 		color: $color-white;
 		letter-spacing: 2px;
