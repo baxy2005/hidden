@@ -52,3 +52,22 @@
 @mixin lighterPurpleBg {
 	background:rgba(121,34,75,0.85);
 }
+
+@mixin BgBox {
+	background:rgba(29,24,30,0.80);
+}
+
+@mixin lighterPurplePlusBg {
+	background:rgba(197,16,102,0.8);
+}
+
+@mixin heading24 {
+		font-size: 24px;;
+		@include paddingMarginZero;
+		color: $color-white;
+		letter-spacing: 1px;
+		font-family: Kiro-extra-light, sans-serif;
+		margin-right: 10px;
+		display: block;
+}
+
