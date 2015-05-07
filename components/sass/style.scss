@@ -62,6 +62,9 @@ body{
 	color: $color-white;
 	opacity: 1 !important;
 }
+.img-responsive {
+    width: 100%;
+}
 /*opening*/
 .openingBlog, .openingPlace {
 	margin-top: $paddingOpeningSection;
@@ -287,17 +290,18 @@ header {
     @include lighterPurplePlusBg;
 }
 
-/*social footer nav */
+/*social footer nav and blog title sharing */
 
-footer .soc {
+footer .soc, .blog .soc {
 	padding-left: 0px;
 	list-style: outside none none;
 	text-align: center;
 	margin-bottom: 0;
-
 	}
-	
-footer ul li {
+.blog .soc {
+	text-align: left;
+	}	
+footer ul li, .blog ul.soc li {
     display: inline-block;
 	border-radius: 32px;
 	border: 1px solid $color-lightPurple;
@@ -307,44 +311,59 @@ footer ul li {
 	margin-right: 4px;
 	text-indent: -3000px;
 }
-footer ul li.facebook {
+.blog ul.soc li {
+	width: 27px;
+	height: 27px;
+}
+footer ul li.facebook, .blog ul.soc li.facebook {
 	background-image:url(../images/hidden-hungary-social-facebook-header.svg);
 	background-repeat: no-repeat;
 }
-footer ul li.twitter {
+ .blog ul.soc li.facebook,  .blog ul.soc li.twitter, .blog ul.soc li.instagram, .blog ul.soc li.email   {
+	background-size: 27px 27px;
+	background-position: -1px -1px;
+}
+footer ul li.twitter, .blog ul.soc li.twitter {
 	background-image:url(../images/hidden-hungary-social-twitter-header.svg);
 	background-repeat: no-repeat;
 }
-footer ul li.instagram {
+footer ul li.instagram, .blog ul.soc li.instagram {
 	background-image:url(../images/hidden-hungary-social-instagram-header.svg);
 	background-repeat: no-repeat;
 }
-
-footer ul li a {
+.blog ul.soc li.email {
+	background-image:url(../images/hidden-hungary-social-mail.svg);
+	background-repeat: no-repeat;
+}
+footer ul li a, .blog ul.soc li a {
     padding: 0;
 	width: 35px;
 	height: 35px;
 	display: block;
-
+}
+.blog ul.soc li a {
+	width: 27px;
+	height: 27px;
 }
 footer ul li:hover {
 	opacity:1;
+}
+footer ul li.facebook:hover, .blog ul.soc li.facebook:hover, footer ul li.twitter:hover, .blog ul.soc li.twitter:hover, footer ul li.instagram:hover, .blog ul.soc li.instagram:hover, .blog ul.soc li.email:hover  {
+	background-repeat: no-repeat;
+	border: 1px solid $color-white;
+}
 
-}
-footer ul li.facebook:hover {
+footer ul li.facebook:hover, .blog ul.soc li.facebook:hover {
 	background-image:url(../images/hidden-hungary-social-facebook-headerOver.svg);
-	background-repeat: no-repeat;
-	border: 1px solid $color-white;
 }
-footer ul li.twitter:hover {
+footer ul li.twitter:hover, .blog ul.soc li.twitter:hover {
 	background-image:url(../images/hidden-hungary-social-twitter-headerOver.svg);
-	background-repeat: no-repeat;
-	border: 1px solid $color-white;
 }
-footer ul li.instagram:hover {
+footer ul li.instagram:hover, .blog ul.soc li.instagram:hover  {
 	background-image:url(../images/hidden-hungary-social-instagram-headerOver.svg);
-	background-repeat: no-repeat;
-	border: 1px solid $color-white;
+}
+.blog ul.soc li.email:hover {
+	background-image:url(../images/hidden-hungary-social-mailOver.svg);
 }
 /*form*/
 
@@ -483,7 +502,7 @@ label {
 /*blog*/
 .blog {
 	width: 751px;
-		overflow:auto;
+	overflow:auto;
 	overflow-x: hidden;
 	top: 0px;
 	left: 274px;
@@ -517,6 +536,45 @@ label {
 	font-size: 13px;
 	margin-bottom: 15px;
 	display: block;	}
+	
+	.pagination > li > a, .pagination > li > span {
+    background-color: transparent;
+	border-color: $color-lightPurple;
+	color: $color-lightPurple;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+    color: $color-white;
+    border-color: $color-white
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    z-index: 2;
+    cursor: default;
+    background-color: $color-secondary !important ;
+    color: #FFF;
+    border-color: $color-secondary;
+}
+
+}
+.categories{
+	.nav > li > a {
+    padding: 5px 0px;
+	color: $color-lightPurple;
+	font-size: $main-paragraph-size-mobil;
+	letter-spacing: 1px;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+	background: transparent;
+	color: $color-white;
+	
+}
+.nav > li {
+	border-bottom: 1px solid rgba( $color-white, .3);
+}
+h3 {
+	@include heading24;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
 }
 
 	
@@ -682,7 +740,6 @@ height: auto;
 .carousel-inner.subpages {
     position: fixed;
 }
-
 }
 
 @media (max-width: 440px) {
@@ -698,4 +755,8 @@ height: auto;
 			margin: 0 auto;
 		}
 	}
+	.blog .soc {
+	text-align: center;	
+}
+
 }
