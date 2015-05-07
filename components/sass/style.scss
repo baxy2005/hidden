@@ -483,6 +483,15 @@ label {
 /*blog*/
 .blog {
 	width: 751px;
+		overflow:auto;
+	overflow-x: hidden;
+	top: 0px;
+	left: 274px;
+	position: fixed;
+	height:100%;
+	@include BgBox;
+	z-index: 2000;
+
 	.media-heading {
 		@include heading24;
 	}
@@ -668,9 +677,7 @@ left: 0px;
 width: auto;
 height: auto;
 }
-.blog {
-	width: 95%;
-}
+
 
 .carousel-inner.subpages {
     position: fixed;
