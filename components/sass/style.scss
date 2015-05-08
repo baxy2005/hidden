@@ -47,6 +47,10 @@ body{
 	background: $color-secondary;
 }
 /*general*/
+
+.andColor {
+	color: $color-primary;	
+}
 ::-moz-selection {
     background: $color-secondary;
     color: $color-lightPurple;
@@ -62,8 +66,9 @@ body{
 	color: $color-white;
 	opacity: 1 !important;
 }
-.img-responsive {
+.full-width {
     width: 100%;
+	margin-bottom: 20px;
 }
 /*opening*/
 .openingBlog, .openingPlace {
@@ -272,7 +277,7 @@ header {
 
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, .navSubItems {
     color: $color-lightPurple;
 	text-align: center;
 	@include BgBox;
@@ -281,13 +286,38 @@ header {
 	padding-top: 8px;
 	padding-bottom: 7px;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover{
     color: #FFF;
 	@include BgBox;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #FFF;
     @include lighterPurplePlusBg;
+}
+a.activeSub {
+	color:#FFF!important;
+}
+
+.navSubItems {
+	list-style: outside none none;
+	@include paddingMarginZero;
+	li {
+	margin-bottom: 1px;
+	}
+	li:last-child {
+		padding-bottom: 6px;
+	}
+
+	a {
+		color: $color-lightPurple;
+		text-decoration: none;
+		display: block;
+		padding-top: 2px;
+		padding-bottom: 1px;
+	&:hover  {
+		color: #FFF;
+	}
+	}
 }
 
 /*social footer nav and blog title sharing */
@@ -429,12 +459,12 @@ label {
 		
 	}
 	h1 {
-		font-size: 36px;;
+		font-size: 42px;;
 		@include paddingMarginZero;
 		color: $color-white;
 		letter-spacing: 2px;
 		font-family: Kiro-extra-light, sans-serif;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		}
 	.sectionTitleBig {
 		height: 3px;
@@ -443,7 +473,7 @@ label {
 		margin-top: 65px;
 }
 	.sectionTitleBig span {
-		top: -47px;
+		top: -53px;
 		position: relative;
 	}
 	.tableHeader{
@@ -457,6 +487,12 @@ label {
 	}
 	h2 {
 	@include heading24;
+	}
+	h5{
+		@include heading24;
+		font-size: 24px;
+		color: $color-primary;
+		margin-bottom: 5px;
 	}
 	.tableCell.line {
 		width: 100%;
@@ -495,9 +531,46 @@ label {
 	}
 	}
 .paddingContent {
-	padding: 25px;
+	padding: 40px;
 		
 	}
+.bookingBtn {
+	width: 100%;
+	margin-top: 0px;	
+			background-color: darken( $color-green, 17% );
+			color: rgba( $color-white, .7 );
+		&:hover {
+			background-color: darken( $color-green, 5% );
+			color: rgba( $color-white, 1 );
+	}
+
+}
+	
+	
+/*tour*/
+
+.tour {
+	.media-heading {
+		@include heading24;
+		font-size: 34px;
+	}
+	.submit {
+		margin-top:10px;
+		margin-bottom:0;
+		color: rgba( $color-white, .7 );
+		&:hover {
+			color: rgba( $color-white, 1 );
+	}
+	}
+	.media-left{
+	padding-right: 25px;
+	}
+	.media {
+	border-bottom: 1px solid rgba( $color-white, .3);
+	padding-bottom: 35px;
+	margin-bottom: 30px;
+	}
+}
 	
 /*blog*/
 .blog {
@@ -513,14 +586,20 @@ label {
 
 	.media-heading {
 		@include heading24;
+		font-size: 34px;
 	}
 	.media-left{
 	padding-right: 25px;
 	}
 	.media {
 	border-bottom: 1px solid rgba( $color-white, .3);
-	padding-bottom: 25px;
-	margin-bottom: 20px;
+	padding-bottom: 35px;
+	margin-bottom: 30px;
+	}
+	.mediaOne {
+	 margin-bottom: 30px;
+    padding-top: 40px;
+	border-bottom: none;
 	}
 	.submit {
 	margin-top:0;
@@ -743,7 +822,7 @@ height: auto;
 }
 
 @media (max-width: 440px) {
-	.blog .media-left{
+	.blog .media-left, .tour .media-left{
 	width: 100%;
 	display: block;	
 	padding-right: 0px;
@@ -758,5 +837,9 @@ height: auto;
 	.blog .soc {
 	text-align: center;	
 }
+.paddingContent {
+	padding: 20px;
+		
+	}
 
 }
