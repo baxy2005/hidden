@@ -11,13 +11,15 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>        
-    <div class="brand-BG">
-        <div class="brand-wrapper">
-            <img src="images/hidden-hungary-brand-header.svg" alt="" class="center-block">
-            <h1>hidden<span class="logoColor">hungary</span></h1>
-        </div>
-    </div>
+<header>      
+      <div class="brand-BG">
+          <div class="brand-wrapper">
+              <a class="brandTop" href="index.html">  
+                  <img src="images/hidden-hungary-brand-header.svg" alt="" class="center-block">
+                  <h1>hidden<span class="logoColor">hungary</span></h1>
+              </a>  
+          </div>
+      </div>
     <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -36,7 +38,8 @@
             <li><a href="#">Wine Tours</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">FAQs</a></li>
-            <li class="active"><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="active"><a href="#">Booking</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
     </nav><!--nav--> 
@@ -51,6 +54,15 @@
     </footer> <!--header footer--> 
 </header><!--header-->
 <main>
+<div class="openingheader fullheight containter">
+	<div class="row openingheaderItems">
+    	<div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+        	<img src="images/hidden-hungary-brand-openingMIddle.png" width="127" height="87" alt="...">
+            <h1>Discover the hidden parts of Hungary with us</h1>
+            <button class="btn btn-default center-block">Scroll Down</button>
+        </div>
+	</div>   
+</div><!--opening title-->
 <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -78,8 +90,8 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div><!--carousel-->
-    <div class="container">
+  </div><!--carousel-->
+      <div class="container">
         <div class="row openingBlog">
             <span class="col-lg-12 marginBottom">
                 <img src="images/hidden-hungary-blog-icon-opening.svg" height="42" alt="" class="img-responsive center-block iconOpening">
@@ -117,7 +129,7 @@
             <span class="col-lg-12 marginBottom">
                 <img src="images/hidden-hungary-place-icon-opening.svg" height="42" alt="" class="img-responsive center-block iconOpening">
             </span>
-	    <div class="col-lg-8 col-lg-offset-2">
+	    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
 			<h3 class="section-title">
             	<span>
                 Budapest
@@ -163,16 +175,18 @@
 				</a>              
 			</div>
     </div><!--owl budapest -->
-    <button class="btn btn-default center-block marginBottomSmall">read more</button>
+    <button class="btn btn-default center-block">read more</button>
     </div>
-	    <div class="col-lg-8 col-lg-offset-2">
+     </div>
+    <div class="row openingPlace openingMarginTopSmall">
+	    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
 			<h3 class="section-title">
             	<span>
             		Kali basin
                 </span>    
             </h3>
         </div>
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 owlePadding">
 		<div id="owl-demo-2" class="owl-carousel owl-theme">
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-eu.jpg" title="Palace of Arts">
@@ -213,10 +227,19 @@
     </div><!--owl kali -->
     <button class="btn btn-default center-block">read more</button>
     </div>
-        </div><!--places blog-->
+    </div>
     </div><!--container-->
 </main><!--main-->
-<footer>
+<footer class="mainFooter">
+    <div class="container">
+        <div class="row">
+        	<div class="pull-left">
+            © Copyright HiddenHungary 2015 | <a href="#">Terms & Conditions</a> | design: <a href="http://www.varadi.tv" target="_blank">Varadi</a> | development: <a href="http://farm.co.hu" target="_blank">Farm</a></div>
+            <div class="pull-right">
+                <img src="images/hidden-hungary-brand-footer.svg"  alt="" class="img-responsive center-block">
+            </div>
+        </div>
+    </div>
 </footer><!--footer-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/respond.js"></script>

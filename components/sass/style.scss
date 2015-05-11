@@ -43,6 +43,40 @@ body{
 	font-family: Kiro-light;
 	
 }
+
+.openingheader {
+	z-index: 14;
+	position: absolute;
+	text-align: center;
+	display: table;
+	width: 100%;
+	.btn-default {
+    color: $color-white;
+    border-color: $color-white;
+	background: transparent;
+	margin-top: 40px;
+	letter-spacing: 1px;
+	&:hover {
+		background: $color-white;
+		color: $color-primary;
+		-moz-transition: all .2s ease-in;
+		-o-transition: all .2s ease-in;
+		-webkit-transition: all .2s ease-in;
+		transition: all .2s ease-in;
+
+	}
+}
+	.openingheaderItems{
+		display: table-cell;
+		vertical-align: middle;
+		h1 {
+			font-size: 28px;
+			color: $color-white;
+			letter-spacing: 1px;
+			text-shadow: 5px 5px 10px rgba(0,0,0,0.9) !important;
+		}
+	}
+}
 .test {
 	background: $color-secondary;
 }
@@ -74,7 +108,10 @@ body{
 .openingBlog, .openingPlace {
 	margin-top: $paddingOpeningSection;
 }
-
+.openingMarginTopSmall {
+	margin-top:$marginfourty;
+	margin-bottom: $paddingOpeningSection;
+}
 .openingBlog {
 	h2, .small, p {
 			text-align:center;
@@ -132,7 +169,7 @@ body{
 	color: $color-primary;
 	font-size: $mid-header-size;	
 	margin-top:0;
-	margin-bottom: $margintwenty;
+	margin-bottom: 30px;
 	letter-spacing: 2px;
 }
 .openingPlace h5{
@@ -219,6 +256,18 @@ header {
 	display: table;
 	@include BgBox;
 	}
+	.brandTop {
+	display:block;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		opacity: 0.2 ;
+		transition: opacity .25s ease-in-out;
+   		-moz-transition: opacity .25s ease-in-out;
+   		-webkit-transition: opacity .25s ease-in-out;
+
+	}
+	}
 	.brand-wrapper {
 	display: table-cell;
 	vertical-align:middle;
@@ -286,7 +335,7 @@ header {
 	padding-top: 8px;
 	padding-bottom: 7px;
 }
-.navbar-default .navbar-nav > li > a:hover{
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
     color: #FFF;
 	@include BgBox;
 }
@@ -552,7 +601,7 @@ label {
 .tour {
 	.media-heading {
 		@include heading24;
-		font-size: 34px;
+		font-size: 32px;
 	}
 	.submit {
 		margin-top:10px;
@@ -586,7 +635,7 @@ label {
 
 	.media-heading {
 		@include heading24;
-		font-size: 34px;
+		font-size: 32px;
 	}
 	.media-left{
 	padding-right: 25px;
@@ -656,7 +705,7 @@ h3 {
 }
 }
 
-	
+/* scroll */
 ::-webkit-scrollbar {
       width: 5px;
 }
@@ -677,7 +726,26 @@ h3 {
       background-color: black;
 } /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
 
+/* footer */
 
+.mainFooter {
+	min-height: 70px;
+	background-color: $color-secondary;
+	padding: 25px;
+	color: $color-lightPurple;
+	letter-spacing: 1px;
+	font-size: 1em;
+	a {
+		color: $color-lightPurple;
+		text-decoration: none;
+		&:hover {
+		color: $color-white;
+		}
+	}
+	.pull-left{
+		padding-top: 10px;
+	}
+}
 
 @media (max-width: 991px) {
 header {
@@ -685,24 +753,23 @@ header {
 	top: 0px;
 	left: 0px;	
 	width: 100%;
-	@include BgBox;;
 .brand-BG {
-    height: 50px;
+    height: 60px;
     width: 100%;
 	float: left;
-	background: none;
+	@include BgBox;
 	}
  img{
 	width: 76px;
 	height: 49px;
 	padding: 7px 5px 3px 5px;
 	position: absolute;	
-	top: 2px;
+	top: 3px;
 }
 h1 {
 	vertical-align: middle;
 	font-size: 20px;
-	padding-top: 7px;
+	margin-top: -2px;
 	
 }
 }
@@ -728,24 +795,21 @@ h1 {
 	border-bottom: none;
 	margin-bottom: 1px;
 }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-	color: #FFF !important;
-	background-clip: padding-box;
-	border-radius: 0px;
-}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
 	color: #FFF !important;
-	border-radius: 15px;
+	border-radius: 0px;
 	background-clip: padding-box;
-	background: none;
+	@include lighterPurplePlusBg;
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	
+.navbar-default .navbar-nav > li > a, .navSubItems {
+    color: #C5B7B9;
+    @include lighterPurpleBg;
 }
-.navbar-default .navbar-nav > li > a:hover {
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #FFF;
-    background: transparent;
+    @include lighterPurpleBg;
 }
     .navbar-header {
         float: none;
@@ -784,8 +848,8 @@ h1 {
 	}
 	.navbar-toggle {
 	border: 1px solid #FFF;
-	margin-top: -39px;
-	margin-right: 5px;
+	margin-top: -48px;
+	margin-right: 7px;
 	border-radius: 6px;
 	margin-bottom:0px;
     display: block;
@@ -803,7 +867,7 @@ h1 {
 	margin-bottom: 0;
 }
 .navbar-default {
-	margin-top: 7px;
+	margin-top: 0px;
 }
 
 .contentRight {
@@ -818,6 +882,15 @@ height: auto;
 
 .carousel-inner.subpages {
     position: fixed;
+}
+.mainFooter {
+	.pull-left, .pull-right{
+		width: 100%;
+		text-align: center;
+	}
+	.pull-right{
+		margin-top: 30px;
+	}
 }
 }
 
