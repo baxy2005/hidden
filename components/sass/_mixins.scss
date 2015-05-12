@@ -53,12 +53,21 @@
 	background:rgba(121,34,75,0.85);
 }
 
+
+
+
 @mixin BgBox {
 	background:rgba(29,24,30,0.80);
+}
+@mixin BgBoxSubnav {
+	background:rgba(29,24,30,0.95);
 }
 
 @mixin lighterPurplePlusBg {
 	background:rgba(197,16,102,0.8);
+}
+@mixin lighterPurplePlusBgSubnav {
+	background:rgba(197,16,102,0.95);
 }
 
 @mixin heading24 {

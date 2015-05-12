@@ -261,7 +261,7 @@ header {
 	cursor: pointer;
 	text-decoration: none;
 	&:hover {
-		opacity: 0.2 ;
+		opacity: 0.5 ;
 		transition: opacity .25s ease-in-out;
    		-moz-transition: opacity .25s ease-in-out;
    		-webkit-transition: opacity .25s ease-in-out;
@@ -731,7 +731,7 @@ h3 {
 .mainFooter {
 	min-height: 70px;
 	background-color: $color-secondary;
-	padding: 25px;
+	padding: 10px;
 	color: $color-lightPurple;
 	letter-spacing: 1px;
 	font-size: 1em;
@@ -743,7 +743,10 @@ h3 {
 		}
 	}
 	.pull-left{
-		padding-top: 10px;
+		padding-top: 15px;
+	}
+		.pull-right{
+		padding-top: 4px;
 	}
 }
 
@@ -799,17 +802,17 @@ h1 {
 	color: #FFF !important;
 	border-radius: 0px;
 	background-clip: padding-box;
-	@include lighterPurplePlusBg;
+	@include lighterPurplePlusBgSubnav;
 }
 
 .navbar-default .navbar-nav > li > a, .navSubItems {
     color: #C5B7B9;
-    @include lighterPurpleBg;
+    @include BgBoxSubnav;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #FFF;
-    @include lighterPurpleBg;
+    @include BgBoxSubnav;
 }
     .navbar-header {
         float: none;
@@ -854,6 +857,11 @@ h1 {
 	margin-bottom:0px;
     display: block;
 }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: $color-primary;
+}
+
 .opening h1 {
 	text-align: center;
 }
@@ -916,3 +924,10 @@ height: auto;
 	}
 
 }
+
+@media (max-width: 479px) {
+	
+	.openingBlog .col-xs-6{
+		width: 100%;
+	}
+	}
