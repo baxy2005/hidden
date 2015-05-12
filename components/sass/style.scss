@@ -82,6 +82,15 @@ body{
 }
 /*general*/
 
+a {
+	color: $color-primary;
+}
+
+a:hover {
+	color: $color-primary;
+	text-decoration: none;           	
+}
+
 .andColor {
 	color: $color-primary;	
 }
@@ -236,6 +245,7 @@ body{
 
 .carousel-control {
   opacity: 0;
+  z-index: 60;
 }
 
 .carousel-control.right,
